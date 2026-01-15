@@ -1,11 +1,231 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>Les bases de l'HTML</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        code {
+            background: #eee;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        pre {
+            background: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    re
+
+    <header>
+        <h1>Apprendre les bases de l'HTML</h1>
+        <p>Un mini site pour comprendre les fondations du web</p>
+    </header>
+
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#structure">Structure</a>
+        <a href="#balises">Balises</a>
+        <a href="#texte">Texte</a>
+        <a href="#liens">Liens</a>
+        <a href="#images">Images</a>
+        <a href="#listes">Listes</a>
+        <a href="#conclusion">Conclusion</a>
+    </nav>
+
+    <main>
+
+        <section id="intro">
+            <h2>1. Qu'est-ce que l'HTML ?</h2>
+            <p>
+                HTML signifie <strong>HyperText Markup Language</strong>.
+                C'est le langage utilisé pour créer la structure des pages web.
+                Il permet d'organiser le contenu : titres, paragraphes, images, liens, listes, etc.
+            </p>
+        </section>
+
+        <section id="structure">
+            <h2>2. Structure de base d'une page HTML</h2>
+            <p>Voici la structure minimale d’un document HTML :</p>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Titre de la page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    Contenu de la page
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+            <ul>
+                <li><code>&lt;!DOCTYPE html&gt;</code> : indique qu’on utilise HTML5</li>
+                <li><code>&lt;html&gt;</code> : racine du document</li>
+                <li><code>&lt;head&gt;</code> : informations pour le navigateur</li>
+                <li><code>&lt;body&gt;</code> : contenu visible par l’utilisateur</li>
+            </ul>
+        </section>
+
+        <section id="balises">
+            <h2>3. Les balises HTML</h2>
+            <p>
+                L’HTML fonctionne avec des <strong>balises</strong>.
+                La plupart ont une balise ouvrante et une balise fermante :
+            </p>
+
+            <pre><code>&lt;p&gt;Ceci est un paragraphe&lt;/p&gt;</code></pre>
+
+            <p>
+                Certaines balises sont dites "auto-fermantes" :
+            </p>
+
+            <pre><code>&lt;img src="image.jpg" alt="Une image"&gt;</code></pre>
+        </section>
+
+        <section id="texte">
+            <h2>4. Le texte : titres et paragraphes</h2>
+            <p>Pour écrire du texte :</p>
+
+            <ul>
+                <li><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> : titres (du plus important au moins important)</li>
+                <li><code>&lt;p&gt;</code> : paragraphe</li>
+            </ul>
+
+            <pre><code>&lt;h1&gt;Titre principal&lt;/h1&gt;
+&lt;h2&gt;Sous-titre&lt;/h2&gt;
+&lt;p&gt;Ceci est un paragraphe.&lt;/p&gt;
+</code></pre>
+        </section>
+
+        <section id="liens">
+            <h2>5. Les liens</h2>
+            <p>
+                Les liens permettent de naviguer entre les pages grâce à la balise <code>&lt;a&gt;</code>.
+            </p>
+
+            <pre><code>&lt;a href="https://www.google.com"&gt;Aller sur Google&lt;/a&gt;</code></pre>
+        </section>
+
+        <section id="images">
+            <h2>6. Les images</h2>
+            <p>
+                Pour afficher une image, on utilise la balise <code>&lt;img&gt;</code>.
+            </p>
+
+            <pre><code>&lt;img src="chat.jpg" alt="Un chat mignon"&gt;</code></pre>
+
+            <ul>
+                <li><code>src</code> : chemin de l’image</li>
+                <li><code>alt</code> : texte alternatif (important pour l’accessibilité)</li>
+            </ul>
+        </section>
+
+        <section id="listes">
+            <h2>7. Les listes</h2>
+            <p>Il existe deux types de listes :</p>
+
+            <h3>Liste non ordonnée (à puces)</h3>
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
+    &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+            <h3>Liste ordonnée (numérotée)</h3>
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;Installer un éditeur&lt;/li&gt;
+    &lt;li&gt;Écrire le code&lt;/li&gt;
+    &lt;li&gt;Ouvrir dans le navigateur&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+        </section>
+
+        <section id="conclusion">
+            <h2>8. Conclusion</h2>
+            <p>
+                L’HTML sert à structurer le contenu d’un site web.
+                Il est souvent utilisé avec :
+            </p>
+            <ul>
+                <li><strong>CSS</strong> pour le style (couleurs, tailles, mise en page)</li>
+                <li><strong>JavaScript</strong> pour l’interactivité</li>
+            </ul>
+            <p>
+                Une fois les bases maîtrisées, tu pourras créer tes propres pages web.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 - Apprendre l'HTML</p>
+    </footer>
+
 </body>
 </html>
