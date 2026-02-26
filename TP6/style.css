@@ -14,14 +14,6 @@ h1 {
     margin-top: 20px;
 }
 
-.back-link {
-    display: inline-block;
-    margin: 10px;
-    text-decoration: none;
-    color: #4A69BD;
-    font-weight: bold;
-}
-
 
 .game-container {
     display: flex;
