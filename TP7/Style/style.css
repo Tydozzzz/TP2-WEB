@@ -1,0 +1,21 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; text-align: center; color: white; min-height: 100vh; display: flex; flex-direction: column; }
+.rouge { background-color: #ff5e57; }
+.bleu { background-color: #3867ff; }
+.vert { background-color: #4cd137; }
+.marron { background-color: #a07855; }
+.teal { background-color: #3d9970; }
+.violet { background-color: #9b59b6; }
+.jaune { background-color: #f1c40f; color: black; }
+.orange { background-color: #f39c12; }
+.lavande { background-color: #c0c0e0; color: black; }
+.navy { background-color: #000080; }
+.gris { background-color: #bdc3c7; color: black; }
+.flex-row { display: flex; flex: 1; }
+.flex-col { display: flex; flex-direction: column; flex: 1; }
+.h-100 { height: 100px; line-height: 100px; }
+.h-50 { height: 50px; line-height: 50px; }
+.w-20 { width: 20%; }
+.grow { flex-grow: 1; display: flex; align-items: center; justify-content: center; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; flex: 1; }
+.grid-16 { display: grid; grid-template-columns: repeat(4, 1fr); grid-template-rows: repeat(4, 1fr); flex: 1; gap: 2px; padding: 10px; }
